@@ -15,4 +15,9 @@
   `http://localhost:8000/api/v1/auth/sign-up`
 - Create Controller
 - Create Controller
+
   - signup
+
+- Create Middleware
+  - error handler
+  - custom error handler

@@ -2,6 +2,7 @@ import express from "express";
 import { PORT } from "./config/index.js";
 import dbConnect from "./config/db/database.js";
 import routes from "./routes/index.js";
+import { errorHandler } from "./middlewares/index.js";
 
 const app = express();
 
@@ -10,6 +11,9 @@ app.use(express.json());
 
 // routes
 app.use("/api/v1", routes);
+
+// error hanlde
+app.use(errorHandler);
 
 const serverStart = async () => {
   try {

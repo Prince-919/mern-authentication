@@ -3,7 +3,7 @@ import bcryptjs from "bcryptjs";
 
 const authController = {
   // Sign Up
-  async signup(req, res) {
+  async signup(req, res, next) {
     const { username, email, password } = req.body;
     const hashedPassword = await bcryptjs.hashSync(password, 10);
     const user = new UserModel({ username, email, password: hashedPassword });
@@ -13,7 +13,7 @@ const authController = {
         message: "Sign Up Successful",
       });
     } catch (error) {
-      res.status(500).json(error.message);
+      next(error);
     }
   },
 };
