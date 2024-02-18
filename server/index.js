@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { PORT } from "./config/index.js";
 import dbConnect from "./config/db/database.js";
 import routes from "./routes/index.js";
@@ -8,6 +9,7 @@ const app = express();
 
 // middlewares
 app.use(express.json());
+app.use(cors());
 
 // routes
 app.use("/api/v1", routes);

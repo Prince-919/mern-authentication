@@ -14,5 +14,10 @@
   - Sign Up
 
 - Create Header Component
+
   - LOGO
   - Anchor Tag
+
+- Sign Up
+  - Create UI
+  - Adding Sign Up fuunctionality
