@@ -1,8 +1,12 @@
 import express from "express";
 import { PORT } from "./config/index.js";
 import dbConnect from "./config/db/database.js";
+import routes from "./routes/index.js";
 
 const app = express();
+
+// routes
+app.use("/api/v1", routes);
 
 const serverStart = async () => {
   try {
@@ -16,3 +20,9 @@ const serverStart = async () => {
 };
 
 serverStart();
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "API is working🚀🚀🚀",
+  });
+});

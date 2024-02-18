@@ -8,3 +8,7 @@
 
 - Setup dotenv
 - Connect MongoDB Database
+- Create User Model
+- Create User Route
+  `http://localhost:8000/api/v1/user/sign-up`
+- Create Controller
