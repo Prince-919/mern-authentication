@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import TextInput from "../components/TextInput";
+import ButtonLoading from "../components/ButtonLoading";
+import Button from "../components/Button";
+import TextAuthBottom from "../components/TextAuthBottom";
+
 const SignUp = () => {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(false);
@@ -38,39 +43,27 @@ const SignUp = () => {
         <h1 className="text-center font-semibold text-3xl my-5">Sign Up</h1>
         <div className="_shadow p-10 rounded">
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <input
+            <TextInput
               type="text"
               placeholder="Username"
               id="username"
-              className="bg-slate-100 p-3 rounded-lg"
-              onChange={handleChange}
+              handleChange={handleChange}
             />
-            <input
+            <TextInput
               type="email"
               placeholder="Email"
               id="email"
-              className="bg-slate-100 p-3 rounded-lg"
-              onChange={handleChange}
+              handleChange={handleChange}
             />
-            <input
+            <TextInput
               type="password"
               placeholder="Password"
               id="password"
-              className="bg-slate-100 p-3 rounded-lg"
-              onChange={handleChange}
+              handleChange={handleChange}
             />
-            <button
-              disabled={loading}
-              className="_btn p-3 rounded-lg bg-[#0496ff] uppercase font-semibold text-white hover:opacity-95 disabled:opacity-80">
-              {loading ? "Loading..." : "Sign Up"}
-            </button>
+            <Button title={loading ? <ButtonLoading /> : "Sign Up"} />
           </form>
-          <div className="flex gap-2 mt-5">
-            <p>Already have an account? </p>
-            <Link to="/sign-in">
-              <span className="text-[#0496ff]">Sign In</span>
-            </Link>
-          </div>
+          <TextAuthBottom text="Already have an account?" linkText="Sign In" />
           <p className="my-2 text-red-500 ">
             {error && "Something went wrong!"}
           </p>
