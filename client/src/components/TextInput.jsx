@@ -7,7 +7,7 @@ const TextInput = ({ type, placeholder, id, className, handleChange }) => {
         id={id}
         onChange={handleChange}
         className={
-          className ? className : "bg-slate-100 p-3 rounded-lg  w-full"
+          className ? className : "bg-[#e9ecef] p-3 rounded-lg  w-full"
         }
       />
     </div>
