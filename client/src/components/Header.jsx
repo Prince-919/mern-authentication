@@ -2,14 +2,12 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="bg-[#212529]">
+    <div className="shadow">
       <div className="flex justify-between p-4 items-center max-w-6xl mx-auto">
         <Link to="/">
-          <h1 className="font-semibold text-xl text-[#f8f9fa]">
-            Authentication
-          </h1>
+          <h1 className="font-semibold text-xl ">Authentication</h1>
         </Link>
-        <ul className="flex gap-5 text-[#f8f9fa] font-semibold">
+        <ul className="flex gap-5 font-semibold">
           <Link to="/">
             <li>Home</li>
           </Link>
