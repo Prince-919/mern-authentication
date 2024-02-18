@@ -15,12 +15,12 @@
 - Create Auth Route
 - Sign Up :
   `http://localhost:8000/api/v1/auth/sign-up`
-- Sign In:
+- Sign In :
   `http://localhost:8000/api/v1/auth/sign-in`
-- Create Controller
 - Create Controller
 
   - signup
+  - signin
 
 - Create Middleware
   - error handler

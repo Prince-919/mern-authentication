@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import TextInput from "../components/TextInput";
 import ButtonLoading from "../components/ButtonLoading";
 import Button from "../components/Button";
 import TextAuthBottom from "../components/TextAuthBottom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
@@ -31,7 +32,7 @@ const SignUp = () => {
         setError(true);
         return;
       }
-      setError(false);
+      navigate("/sign-in");
     } catch (error) {
       setLoading(false);
       setError(true);
@@ -63,7 +64,11 @@ const SignUp = () => {
             />
             <Button title={loading ? <ButtonLoading /> : "Sign Up"} />
           </form>
-          <TextAuthBottom text="Already have an account?" linkText="Sign In" />
+          <TextAuthBottom
+            href="/sign-in"
+            text="Already have an account?"
+            linkText="Sign In"
+          />
           <p className="my-2 text-red-500 ">
             {error && "Something went wrong!"}
           </p>

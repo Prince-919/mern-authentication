@@ -21,3 +21,6 @@
 - Sign Up
   - Create UI
   - Adding Sign Up fuunctionality
+- Sign In
+  - Create UI
+  - Adding Sign In fuunctionality
