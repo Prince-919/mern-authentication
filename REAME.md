@@ -4,4 +4,6 @@
 - Create the server using expressjs
 - Make script
   `"start" : "node server/index.js"`
-  `"start" : "nodemon server/index.js"`
+  `"dev" : "nodemon server/index.js"`
+
+- Setup dotenv
