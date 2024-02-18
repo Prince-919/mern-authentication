@@ -22,5 +22,12 @@
   - Create UI
   - Adding Sign Up fuunctionality
 - Sign In
+
   - Create UI
   - Adding Sign In fuunctionality
+
+- Setup Redux - Toolkit
+  - Create Store
+  - Create Slice
+    - userSlice
+- Adding Redux Persist
