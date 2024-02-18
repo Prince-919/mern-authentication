@@ -7,3 +7,4 @@
   `"dev" : "nodemon server/index.js"`
 
 - Setup dotenv
+- Connect MongoDB Database
