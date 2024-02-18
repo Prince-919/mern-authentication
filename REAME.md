@@ -11,8 +11,12 @@
 - Create User Model
 - Create User Route
   `http://localhost:8000/api/v1/user/test`
+
 - Create Auth Route
+- Sign Up :
   `http://localhost:8000/api/v1/auth/sign-up`
+- Sign In:
+  `http://localhost:8000/api/v1/auth/sign-in`
 - Create Controller
 - Create Controller
 
