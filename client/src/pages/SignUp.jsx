@@ -4,6 +4,7 @@ import ButtonLoading from "../components/ButtonLoading";
 import Button from "../components/Button";
 import TextAuthBottom from "../components/TextAuthBottom";
 import { useNavigate } from "react-router-dom";
+import OAuth from "../components/OAuth";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -63,6 +64,7 @@ const SignUp = () => {
               handleChange={handleChange}
             />
             <Button title={loading ? <ButtonLoading /> : "Sign Up"} />
+            <OAuth />
           </form>
           <TextAuthBottom
             href="/sign-in"

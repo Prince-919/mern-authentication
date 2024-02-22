@@ -10,6 +10,7 @@ import {
   signInStart,
   signInSuccess,
 } from "../redux/user/userSlice";
+import OAuth from "../components/OAuth";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({});
@@ -39,7 +40,6 @@ const SignIn = () => {
       dispatch(signInSuccess(data));
       navigate("/");
     } catch (error) {
-      dispatch(signInStart());
       dispatch(signInFailure(error));
     }
   };
@@ -62,6 +62,7 @@ const SignIn = () => {
               handleChange={handleChange}
             />
             <Button title={loading ? <ButtonLoading /> : "Sign In"} />
+            <OAuth />
           </form>
           <TextAuthBottom
             href="/sign-up"
